@@ -113,6 +113,12 @@
                 padding-top: 100px
             }
         }
+
+        /* nav strips right padding from the last item (header ul.primary-nav li:last-child a),
+           which off-centers the text inside the RSVP pill button; restore it to match btn-small's left padding */
+        header ul.primary-nav li:last-child a.btn-small {
+            padding-right: 30px
+        }
     </style>
 </head>
 
