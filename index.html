@@ -194,6 +194,31 @@
             background-color: #d3b56a;
             border-color: #d3b56a;
         }
+
+        /* hero logo: real text instead of the old "Ram ❤ Antara" script-logo image */
+        .hero-title {
+            color: #fff;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 58px;
+            letter-spacing: 2px;
+            margin: 0 0 40px;
+            text-shadow: 0 2px 14px rgba(0, 0, 0, .65)
+        }
+
+        @media (max-width:600px) {
+            .hero-title {
+                font-size: 32px;
+                margin-bottom: 25px
+            }
+        }
+
+        /* nav logo: same treatment as the old "R❤A" mark image */
+        .logo-text {
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
     </style>
 </head>
 
@@ -202,7 +227,7 @@
         <section class="navigation">
             <header>
                 <div class="header-content">
-                    <div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
+                    <div class="logo"><a href="#" class="logo-text">V &amp; A</a></div>
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
@@ -224,7 +249,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="hero-content text-center">
-                        <img src="img/logo-lg.png">
+                        <h1 class="hero-title">Vivian and Austin</h1>
                     </div>
                 </div>
             </div>
@@ -466,7 +491,8 @@
                         &nbsp;
                         <p>Q: What is the attire?</p>  
                         <p>A: Formal. Don't wear white. I will spill wine on you intentionally/unintentionally if you wear white.</p>
-                </div>
+                <br>
+                    </div>
             </div>
         </div>
     </section>
