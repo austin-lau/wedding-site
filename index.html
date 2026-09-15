@@ -170,18 +170,28 @@
             background: #f8f9fd;
         }
 
-        /* venue section: dark background to set it apart from the engagement pictures section above/below it */
+        /* venue section: light grey background to set it apart from the white engagement pictures section above it */
         #venue {
             background: #eff0f3;
-        }
-
-        #venue h3.header {
-            color: #fff;
         }
 
         /* tighten the gap between each Q and its A (global p{padding-bottom:20px} was leaving too much space) */
         #info p {
             padding-bottom: 4px;
+        }
+
+        /* all RSVP buttons: gold background, white text (was relying on unstyled .btn-accent class) */
+        .btn-accent {
+            color: #fff;
+            background-color: #e8ca6f;
+            border-color: #e8ca6f;
+        }
+
+        .btn-accent:hover,
+        .btn-accent:focus {
+            color: #fff;
+            background-color: #d3b56a;
+            border-color: #d3b56a;
         }
     </style>
 </head>
