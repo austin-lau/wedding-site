@@ -95,11 +95,8 @@
             margin-bottom: 20px
         }
 
-        .venue-address {
-            padding-top: 10px
-        }
-
-        .venue-address p {
+        #venue-content p.venue-address-line {
+            margin: 15px 0 20px;
             font-size: 16px;
             letter-spacing: 1px
         }
@@ -158,8 +155,12 @@
             }
         }
 
-        /* top nav bar: bright red once scrolled (.fixed, toggled by JS); transparent/faded at the top of the page,
-           same as the original behavior — the existing transition:all on .navigation animates the fade */
+        /* top nav bar: red at all scroll positions — just barely translucent at the very top of the page (over the hero),
+           going fully solid once scrolled (.fixed, toggled by JS); the existing transition:all on .navigation animates the change */
+        section.navigation {
+            background-color: rgba(190, 19, 45, .95);
+        }
+
         section.navigation.fixed {
             background-color: #be132d;
         }
@@ -171,14 +172,10 @@
 
         /* venue section: dark background to set it apart from the engagement pictures section above/below it */
         #venue {
-            background: #1c1f26;
+            background: #c2c6d1;
         }
 
         #venue h3.header {
-            color: #fff;
-        }
-
-        .venue-address p {
             color: #fff;
         }
 
