@@ -119,6 +119,44 @@
         header ul.primary-nav li:last-child a.btn-small {
             padding-right: 30px
         }
+
+        /* engagement pics: single row, scrollable side to side instead of wrapping into a ragged grid */
+        .eng-pics-scroll {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x proximity;
+            padding-bottom: 20px;
+        }
+
+        .eng-pics-scroll>div {
+            flex: 0 0 auto;
+            width: 260px;
+            margin-right: 15px;
+            scroll-snap-align: start;
+        }
+
+        #eng-pics .eng-pics-scroll .img-wrap {
+            height: 320px;
+        }
+
+        #eng-pics .eng-pics-scroll img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width:600px) {
+            .eng-pics-scroll>div {
+                width: 200px;
+            }
+
+            #eng-pics .eng-pics-scroll .img-wrap {
+                height: 240px;
+            }
+        }
     </style>
 </head>
 
@@ -210,7 +248,7 @@
                     <h3 class="header">Engagement Pictures</h3>
                 </div>
             </div>
-            <div class="row">
+            <div class="row eng-pics-scroll">
                 <div class="col-md-2">
                     <a class="fancybox" rel="group" href="img/eng_pics/113A9264-lg.jpg">
                         <div class="img-wrap">
@@ -348,14 +386,6 @@
                 <div class="col-xs-12 section-border section-padding"></div>
             </div>
         </div>
-        <!--<div class="row">
-        <div class="col-md-12">
-            <div class="diamond floating-logo">
-                <img src="img/sketch-logo.png" alt="Sketch Logo">
-                <div class="ring"></div>
-            </div>
-        </div>
-    </div>-->
     </section>
 
     <section id="venue">
