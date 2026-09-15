@@ -158,8 +158,8 @@
             }
         }
 
-        /* top nav bar: bright red background at all times, including the scrolled/.fixed state */
-        section.navigation,
+        /* top nav bar: bright red once scrolled (.fixed, toggled by JS); transparent/faded at the top of the page,
+           same as the original behavior — the existing transition:all on .navigation animates the fade */
         section.navigation.fixed {
             background-color: #be132d;
         }
@@ -175,11 +175,10 @@
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
-                                <li><a href="#intro">The Wedding</a></li>
                                 <li><a href="#events">Details</a></li>
-                                <li><a href="#venue">Venue</a></li>
                                 <li><a href="#engpics">Pictures</a></li>
-                                <li><a href="https://docs.google.com/forms/u/0/" class="btn-white btn-small btn-accent">RSVP</a></li>
+                                <li><a href="#venue">Venue</a></li>
+                                <li><a href="https://docs.google.com/forms/u/0/" class="btn-white btn-small btn-accent">RSVP Form</a></li>
                             </ul>
                         </nav>
                     </div>
