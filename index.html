@@ -169,6 +169,19 @@
             background: #f8f9fd;
         }
 
+        /* venue section: dark background to set it apart from the engagement pictures section above/below it */
+        #venue {
+            background: #1c1f26;
+        }
+
+        #venue h3.header {
+            color: #fff;
+        }
+
+        .venue-address p {
+            color: #fff;
+        }
+
         /* tighten the gap between each Q and its A (global p{padding-bottom:20px} was leaving too much space) */
         #info p {
             padding-bottom: 4px;
@@ -392,7 +405,7 @@
         </div>
     </section>
 
-    <section id="venue">
+    <section id="venue" class="section-padding">
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3 class="header">Venue</h3>
@@ -402,6 +415,11 @@
             <div id="venue-content">
                 <h5>Hotel Vin</h5>
                 <p>Grapevine, Texas</p>
+                <p class="venue-address-line">215 East Dallas Rd, Grapevine, TX 76051</p>
+                <a class="btn btn-accent btn-small" target="_blank" rel="noopener"
+                    href="https://www.google.com/maps/search/?api=1&query=Hotel+Vin+215+East+Dallas+Rd+Grapevine+TX+76051">
+                    <i class="fa fa-map-marker"></i>&nbsp;&nbsp;Get Directions
+                </a>
             </div>
         </div>
         <div class="container venue-gallery">
@@ -425,15 +443,6 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <img src="img/venue/venue-rooftop.jpg" alt="Hotel Vin rooftop lounge with fire pit">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-center venue-address">
-                    <p>215 East Dallas Rd, Grapevine, TX 76051</p>
-                    <a class="btn btn-accent btn-small" target="_blank" rel="noopener"
-                        href="https://www.google.com/maps/search/?api=1&query=Hotel+Vin+215+East+Dallas+Rd+Grapevine+TX+76051">
-                        <i class="fa fa-map-marker"></i>&nbsp;&nbsp;Get Directions
-                    </a>
                 </div>
             </div>
         </div>
