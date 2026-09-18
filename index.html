@@ -219,6 +219,15 @@
             font-weight: 700;
             letter-spacing: 2px;
         }
+
+        /* hero background photo: on mobile the tall/narrow crop (cover) centered on the image
+           cuts the groom off at the right edge, since the couple sits right-of-center in the
+           source photo — shift the focal point right so they land centered on screen */
+        @media (max-width:767px) {
+            .hero {
+                background-position: 55% center;
+            }
+        }
     </style>
 </head>
 
