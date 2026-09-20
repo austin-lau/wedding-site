@@ -120,9 +120,11 @@
         }
 
         /* nav strips right padding from the last item (header ul.primary-nav li:last-child a),
-           which off-centers the text inside the RSVP pill button; restore it to match btn-small's left padding */
-        header ul.primary-nav li:last-child a.btn-small {
-            padding-right: 30px
+           which off-centers the text inside a pill button; restore it to match btn-small's left padding.
+           Targets any pill button in the nav (not just :last-child) since there can be more than one. */
+        header ul.primary-nav li a.btn-small {
+            padding-right: 30px;
+            margin-right: 10px
         }
 
         /* engagement pics: grid of evenly-cropped tiles that wraps into rows, like the Hotel Vin photo grid */
@@ -155,7 +157,7 @@
         /* top nav bar: red at all scroll positions — just barely translucent at the very top of the page (over the hero),
            going fully solid once scrolled (.fixed, toggled by JS); the existing transition:all on .navigation animates the change */
         section.navigation {
-            background-color: rgba(190, 19, 45, 0.15);
+            background-color: rgba(190, 19, 45, 0.5);
         }
 
         section.navigation.fixed {
@@ -239,6 +241,7 @@
                                 <li><a href="#eng-pics">Pictures</a></li>
                                 <li><a href="#venue">Venue</a></li>
                                 <li><a href="#info">Information</a></li>
+                                <li><a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1775767375427&amp;key=GRP&amp;app=resvlink" target="_blank" rel="noopener" class="btn-white btn-small btn-accent">Discounted Rooms</a></li>
                                 <li><a href="https://docs.google.com/forms/u/0/" class="btn-white btn-small btn-accent">RSVP Form</a></li>
                             </ul>
                         </nav>
@@ -520,7 +523,7 @@
                         <p>A: Yes.</p>
                         &nbsp;
                         <p>Q: What is on the menu?</p>
-                        <p>A: We will be serving a traditional, multi-course, family-style Chinese meal.</p>
+                        <p>A: We will be serving a  multi-course, family-style, traditional Chinese dinner.</p>
                 <br>
                     </div>
             </div>
