@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Vivian & Austin, June 27, 2027</title>
+    <title>Vivian & Austin, Sunday, June 27, 2027</title>
     <meta name="description" content="We would like to invite you to our big day.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
@@ -119,41 +119,25 @@
             padding-right: 30px
         }
 
-        /* engagement pics: single row, scrollable side to side instead of wrapping into a ragged grid */
-        .eng-pics-scroll {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
-            scroll-snap-type: x proximity;
-            padding-bottom: 20px;
+        /* engagement pics: grid of evenly-cropped tiles that wraps into rows, like the Hotel Vin photo grid */
+        #eng-pics .eng-pics-grid {
+            margin-bottom: 15px;
         }
 
-        .eng-pics-scroll>div {
-            flex: 0 0 auto;
-            width: 260px;
-            margin-right: 15px;
-            scroll-snap-align: start;
+        #eng-pics .eng-pics-grid .img-wrap {
+            height: 220px;
+            margin-bottom: 15px;
         }
 
-        #eng-pics .eng-pics-scroll .img-wrap {
-            height: 320px;
-        }
-
-        #eng-pics .eng-pics-scroll img {
+        #eng-pics .eng-pics-grid img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
         @media (max-width:600px) {
-            .eng-pics-scroll>div {
-                width: 200px;
-            }
-
-            #eng-pics .eng-pics-scroll .img-wrap {
-                height: 240px;
+            #eng-pics .eng-pics-grid .img-wrap {
+                height: 180px;
             }
         }
 
@@ -307,8 +291,10 @@
                     <h3 class="header">Engagement Pictures</h3>
                 </div>
             </div>
-            <div class="row eng-pics-scroll">
-                <div class="col-md-2">
+        </div>
+        <div class="container">
+            <div class="row eng-pics-grid">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/113A9264-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -318,7 +304,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/113A9624-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -328,7 +314,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/M00373-0230-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -338,7 +324,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/M00373-0266-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -348,7 +334,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/M00373-0267-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -358,7 +344,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/m00373-0231-1-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -368,7 +354,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/M00373-0229-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -378,7 +364,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/M00373-0322-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -388,7 +374,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/M00373-0385-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -398,7 +384,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/m00373-0251-1-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -408,7 +394,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/m00373-0334-1-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -418,7 +404,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/M00373-0090-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -428,7 +414,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 col-sm-4 col-xs-6">
                     <a class="fancybox" rel="group" href="img/eng_pics/M00373-0350-lg.jpg">
                         <div class="img-wrap">
                             <div class="overlay">
@@ -496,10 +482,13 @@
                 <div class="col-md-12 text-center">
                     <h3 class="header">Information</h3>
                         <p>Q: Where should I stay for the wedding?</p>  
-                        <p>A: idk yet.</p>
+                        <p>A: Hotel Vin</p>
                         &nbsp;
                         <p>Q: What is the attire?</p>  
-                        <p>A: Formal. Don't wear white. I will spill wine on you intentionally/unintentionally if you wear white.</p>
+                        <p>A: Formal. No white dresses.</p>
+                        &nbsp;
+                        <p>Q: Do you have a wedding registry</p>  
+                        <p>A: No, red envelopes only please.</p>
                 <br>
                     </div>
             </div>
