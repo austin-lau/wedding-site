@@ -135,6 +135,11 @@
             object-fit: cover;
         }
 
+        /* these two portraits are tall/narrow with heads near the top; center-cropping the grid tile cuts them off */
+        #eng-pics .eng-pics-grid img.obj-top {
+            object-position: top;
+        }
+
         @media (max-width:600px) {
             #eng-pics .eng-pics-grid .img-wrap {
                 height: 180px;
@@ -370,7 +375,7 @@
                             <div class="overlay">
                                 <i class="fa fa-search"></i>
                             </div>
-                            <img src="img/eng_pics/M00373-0385-sm.jpg" alt="" />
+                            <img src="img/eng_pics/M00373-0385-sm.jpg" alt="" class="obj-top" />
                         </div>
                     </a>
                 </div>
@@ -400,7 +405,7 @@
                             <div class="overlay">
                                 <i class="fa fa-search"></i>
                             </div>
-                            <img src="img/eng_pics/M00373-0090-sm.jpg" alt="" />
+                            <img src="img/eng_pics/M00373-0090-sm.jpg" alt="" class="obj-top" />
                         </div>
                     </a>
                 </div>
@@ -484,7 +489,7 @@
                 <div class="col-md-12 text-center">
                     <h3 class="header">Information</h3>
                         <p>Q: Where should I stay for the wedding?</p>  
-                        <p>A: We have partnered with Hotel vin to offer a special rate for our guests.</p>
+                        <p>A: We have partnered with Hotel Vin to offer a special rate for our guests. <a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1775767375427&amp;key=GRP&amp;app=resvlink" target="_blank" rel="noopener">Book your room here</a>.</p>
                         &nbsp;
                         <p>Q: What is the attire?</p>  
                         <p>A: Formal. No white dresses.</p>
