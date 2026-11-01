@@ -178,21 +178,29 @@
             background: #eff0f3;
         }
 
-        /* Details section: Bootstrap's default h5 margin (10px) made the gap between Cocktail Hour and
-           Dinner Reception look cramped compared to the gap after the Tea Ceremony note (which also had
-           the global p{padding-bottom:20px} adding space). Zero out the default h5/p spacing and apply
-           one consistent gap between each event block instead. */
+        /* Details section: each event (h5 + optional note) is wrapped in .event so one consistent
+           gap can be applied between events, regardless of whether a note is present. Bootstrap's
+           default h5 margin and the global p{padding-bottom:20px} were producing uneven gaps
+           (tight between some events, wide between others) because they applied inconsistently
+           depending on what element happened to be adjacent. */
         #events h5 {
             margin: 0;
         }
 
-        #events .wp1 p:last-child {
-            padding-bottom: 0;
+        #events .event {
+            margin-bottom: 25px;
+        }
+
+        #events .event:last-child {
             margin-bottom: 0;
         }
 
-        #events .wp1,
-        #events .wp2 {
+        #events .event .note {
+            margin: 4px 0 0;
+            padding-bottom: 0;
+        }
+
+        #events .wp1 {
             margin-bottom: 30px;
         }
 
@@ -315,10 +323,16 @@
                 <div class="col-md-12 text-center">
                     <div class="wp1">
                         <p><strong>Sunday, June 27, 2027</strong></p>
-                        <h5>Tea Ceremony  <span class="time">2 PM</span></h5>
-                        <p><i>family only</i></p>
-                        <h5>Cocktail Hour  <span class="time">5 PM</span></h5>
-                        <h5>Dinner Reception  <span class="time">6 PM</span></h5>
+                        <div class="event">
+                            <h5>Tea Ceremony  <span class="time">2 PM</span></h5>
+                            <p class="note"><i>family only</i></p>
+                        </div>
+                        <div class="event">
+                            <h5>Cocktail Hour  <span class="time">5 PM</span></h5>
+                        </div>
+                        <div class="event">
+                            <h5>Dinner Reception  <span class="time">6 PM</span></h5>
+                        </div>
                     </div>
                 </div>
             </div>
