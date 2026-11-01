@@ -162,8 +162,10 @@
             background: #eff0f3;
         }
 
-        /* tighten the gap between each Q and its A (global p{padding-bottom:20px} was leaving too much space) */
+        /* tighten the gap between each Q and its A (global p{padding-bottom:20px} was leaving too much space);
+           also override the global p{color:rgba(28,54,83,.6)} (faded grey-blue) with solid black */
         #info p {
+            color: #000;
             padding-bottom: 4px;
         }
 
@@ -270,16 +272,14 @@
                 <div class="col-md-12 text-center">
                     <div class="wp1">
                         <p><strong>Sunday, June 27, 2027</strong></p>
-                        <h5>Tea Ceremony  <span class="time">2PM - 5PM</span></h5>
-                        <p>Family only.</p>
+                        <h5>Tea Ceremony  <span class="time">2 PM</span></h5>
+                        <p><i>family only</i></p>
                     </div>
                     <div class="wp2">
-                        <h5>Cocktail Hour  <span class="time">5PM - 6PM</span></h5>
-                        <p>Come socialize and enjoy signature cocktails.</p>
+                        <h5>Cocktail Hour  <span class="time">5 PM</span></h5>
                     </div>
                     <div class="wp3">
-                        <h5>Dinner Reception  <span class="time">6PM - 11PM</span></h5>
-                        <p>Dinner and celebrating with our favorite people.</p>
+                        <h5>Dinner Reception  <span class="time">6 PM</span></h5>
                     </div>
                 </div>
             </div>
