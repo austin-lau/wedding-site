@@ -178,6 +178,24 @@
             background: #eff0f3;
         }
 
+        /* Details section: Bootstrap's default h5 margin (10px) made the gap between Cocktail Hour and
+           Dinner Reception look cramped compared to the gap after the Tea Ceremony note (which also had
+           the global p{padding-bottom:20px} adding space). Zero out the default h5/p spacing and apply
+           one consistent gap between each event block instead. */
+        #events h5 {
+            margin: 0;
+        }
+
+        #events .wp1 p:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        #events .wp1,
+        #events .wp2 {
+            margin-bottom: 30px;
+        }
+
         /* tighten the gap between each Q and its A (global p{padding-bottom:20px} was leaving too much space);
            also override the global p{color:rgba(28,54,83,.6)} (faded grey-blue) with solid black */
         #info p {
@@ -489,7 +507,7 @@
                         <p>A: You can arrive as early as you would like! There is a food hall, bars, and other entertainment inside and around Hotel Vin. Check out <a href="https://www.hotelvin.com/" target="_blank" rel="noopener">Hotel Vin's website</a> for more.</p>
                         &nbsp;
                         <p>Q: Will there be an open bar?</p>
-                        <p>A: Yes, there will be beer, wine, and our signature cocktails avialable.</p>
+                        <p>A: Yes, there will be beer, wine, and our signature cocktails available.</p>
                         &nbsp;
                         <p>Q: What is on the menu?</p>
                         <p>A: We will be serving a  multi-course, family-style, traditional Chinese dinner.</p>
