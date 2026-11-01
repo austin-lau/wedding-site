@@ -196,6 +196,17 @@
             margin-bottom: 30px;
         }
 
+        /* the theme's base CSS only flips .wp1-.wp3 from visibility:hidden to visible for specific
+           animate.css class names (fadeInUp/fadeInLeft/fadeInRight/etc, see styles.min.css) - since
+           the waypoint JS now adds the plain "fadeIn" class (no slide), it never matched that list and
+           the schedule stayed hidden. Flip on the generic .animated class instead so it isn't tied to
+           whichever specific effect is used. */
+        #events .wp1.animated,
+        #events .wp2.animated,
+        #events .wp3.animated {
+            visibility: visible;
+        }
+
         /* tighten the gap between each Q and its A (global p{padding-bottom:20px} was leaving too much space);
            also override the global p{color:rgba(28,54,83,.6)} (faded grey-blue) with solid black */
         #info p {
