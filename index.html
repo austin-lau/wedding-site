@@ -196,14 +196,12 @@
             margin-bottom: 30px;
         }
 
-        /* the theme's base CSS only flips .wp1-.wp3 from visibility:hidden to visible for specific
-           animate.css class names (fadeInUp/fadeInLeft/fadeInRight/etc, see styles.min.css) - since
-           the waypoint JS now adds the plain "fadeIn" class (no slide), it never matched that list and
-           the schedule stayed hidden. Flip on the generic .animated class instead so it isn't tied to
-           whichever specific effect is used. */
-        #events .wp1.animated,
-        #events .wp2.animated,
-        #events .wp3.animated {
+        /* the theme's base CSS hides .wp1-.wp3 (visibility:hidden) until a waypoint-triggered animate.css
+           class makes them visible on scroll; the schedule should just be there with no entrance effect,
+           so force them visible and skip the waypoint/animation JS entirely (see scripts.js) */
+        #events .wp1,
+        #events .wp2,
+        #events .wp3 {
             visibility: visible;
         }
 
