@@ -286,6 +286,19 @@
             font-size: .6em
         }
 
+        /* desktop: the three-line title made the hero block taller, leaving the RSVP button flush
+           against the bottom edge — shift the whole block up and give it equal breathing room below
+           (hero height stays the same, so the photo crop doesn't change) */
+        @media screen and (min-width:1025px) {
+            .hero {
+                padding-bottom: 90px
+            }
+
+            .hero .hero-content {
+                padding-top: calc(40% - 90px)
+            }
+        }
+
         /* hero date: white so it reads against the dark tree background */
         .hero .hero-date {
             color: #fff;
