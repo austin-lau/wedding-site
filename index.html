@@ -320,21 +320,53 @@
             }
         }
 
-        /* phones/tablets: instead of a tight "cover" crop (which zoomed in so far the title sat on
-           top of the couple), show the whole photo at full width just below the fixed nav bar
-           (~120px), fade its bottom edge into a dark tree-green, and put the text below it */
+        /* phones/tablets: zoomed-out photo (both people in frame) placed just below the fixed nav bar
+           (~120px; the strip behind the half-transparent red bar is the same red, so it reads as one
+           solid bar). The image is shown at 140% width centered between the couple, so the hero is
+           exactly 120px + 93.33vw tall. Title on one line in the sky/trees above their heads;
+           date + RSVP button below it, in the gap between them. */
         @media screen and (max-width:1024px) {
             .hero {
                 min-height: 0;
-                padding-bottom: 50px;
-                background:
-                    linear-gradient(to bottom, rgba(30, 50, 25, 0) calc(120px + 66.67vw - 60px), #1e3219 calc(120px + 66.67vw)),
-                    url("img/hero-min.jpg") center 120px / 100% auto no-repeat,
-                    #1e3219;
+                height: calc(120px + 93.33vw);
+                padding-bottom: 0;
+                overflow: hidden;
+                background: url("img/hero-min.jpg") 51% 120px / 140% auto no-repeat, #be132d;
             }
 
             .hero .hero-content {
-                padding-top: calc(120px + 66.67vw + 10px);
+                padding-top: calc(120px + 6vw);
+            }
+
+            .hero .hero-title {
+                font-size: min(8vw, 80px);
+                line-height: 1.1;
+                margin: 0 0 34vw;
+                white-space: nowrap;
+            }
+
+            .hero .hero-title span {
+                display: inline;
+            }
+
+            .hero .hero-date {
+                font-size: min(3.6vw, 22px);
+                letter-spacing: 2px;
+                line-height: 1.4;
+                margin: 0 0 3vw;
+            }
+
+            .hero .hero-date-day {
+                display: block;
+            }
+
+            /* queries.css makes .hero .btn a full-width (80%) block under 480px — keep it compact so
+               it fits between the couple */
+            .hero .btn-large {
+                display: inline-block;
+                width: auto;
+                font-size: 12px;
+                padding: 8px 20px;
             }
         }
     </style>
@@ -374,8 +406,8 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 hidden-xs"></div>
-                <div class="col-sm-4 hidden-xs text-center">
-                     <h3 class="hero-date">Sunday, June 27, 2027</h3>
+                <div class="col-sm-4 text-center">
+                     <h3 class="hero-date"><span class="hero-date-day">Sunday,</span> June 27, 2027</h3>
                     <a class="btn btn-accent btn-large" target="_blank" rel="noopener"
                         href="https://loverly.com/website/v-a-wedding2027"> RSVP Form
                     </a>
