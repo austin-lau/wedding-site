@@ -319,6 +319,24 @@
                 background-position: 55% center;
             }
         }
+
+        /* phones/tablets: instead of a tight "cover" crop (which zoomed in so far the title sat on
+           top of the couple), show the whole photo at full width just below the fixed nav bar
+           (~120px), fade its bottom edge into a dark tree-green, and put the text below it */
+        @media screen and (max-width:1024px) {
+            .hero {
+                min-height: 0;
+                padding-bottom: 50px;
+                background:
+                    linear-gradient(to bottom, rgba(30, 50, 25, 0) calc(120px + 66.67vw - 60px), #1e3219 calc(120px + 66.67vw)),
+                    url("img/hero-min.jpg") center 120px / 100% auto no-repeat,
+                    #1e3219;
+            }
+
+            .hero .hero-content {
+                padding-top: calc(120px + 66.67vw + 10px);
+            }
+        }
     </style>
 </head>
 
