@@ -323,7 +323,7 @@
         /* phones/tablets: zoomed-out photo (both people in frame) placed just below the fixed nav bar
            (~120px; the strip behind the half-transparent red bar is the same red, so it reads as one
            solid bar). The image is shown at 140% width centered between the couple, so the hero is
-           exactly 120px + 93.33vw tall. Title on one line in the sky/trees above their heads;
+           exactly 120px + 93.33vw tall. Title on one line over the trees (below the sky), above their heads;
            date + RSVP button below it, in the gap between them. */
         @media screen and (max-width:1024px) {
             .hero {
@@ -335,13 +335,13 @@
             }
 
             .hero .hero-content {
-                padding-top: calc(120px + 6vw);
+                padding-top: calc(120px + 24vw);
             }
 
             .hero .hero-title {
                 font-size: min(8vw, 80px);
                 line-height: 1.1;
-                margin: 0 0 34vw;
+                margin: 0 0 16vw;
                 white-space: nowrap;
             }
 
