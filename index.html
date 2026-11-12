@@ -247,9 +247,18 @@
         }
 
         /* hero logo: real text instead of the old "Ram ❤ Antara" script-logo image */
+        @font-face {
+            font-family: 'New Icon Script';
+            src: local('New Icon Script'), local('NewIconScript'),
+                 url('fonts/new-icon-script/NewIconScript.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
         .hero-title {
             color: #fff;
-            font-family: 'Great Vibes', cursive;
+            font-family: 'New Icon Script', 'Great Vibes', cursive;
             font-weight: 400;
             font-size: 96px;
             letter-spacing: 1px;
