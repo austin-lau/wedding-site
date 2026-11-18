@@ -285,6 +285,23 @@
             padding-bottom: 4px;
         }
 
+        /* FAQ: each Q&A is wrapped in .faq so the gap between questions is the same whether or not
+           the answer ends with a button (the old &nbsp; spacer lines collapsed onto the button's line) */
+        #info .faq + .faq {
+            margin-top: 40px;
+        }
+
+        /* the last thing in each item (an answer paragraph or a button) adds no space of its own,
+           so the 40px above is the whole gap either way */
+        #info .faq > :last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        #info .faq .btn {
+            margin-top: 6px;
+        }
+
         /* all RSVP buttons: gold background, white text (was relying on unstyled .btn-accent class) */
         .btn-accent {
             color: #fff;
@@ -680,40 +697,50 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h3 class="header">Information</h3>
-                        <p>Q: When do I need to RSVP by?</p>
-                        <p>A: Please RSVP by February 28, 2027.</p>
-                        <a class="btn btn-accent btn-small" target="_blank" rel="noopener"
-                            href="https://loverly.com/website/v-a-wedding2027">
-                            <i class="fa fa-envelope"></i>&nbsp;&nbsp;RSVP Form
-                        </a>
-                        &nbsp;
-                        <p>Q: Where should I stay for the wedding?</p>
-                        <p>A: We have partnered with Hotel Vin to offer a special rate for our guests.</p>
-                        <a class="btn btn-accent btn-small" target="_blank" rel="noopener"
-                            href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1775767375427&amp;key=GRP&amp;app=resvlink">
-                            <i class="fa fa-bed"></i>&nbsp;&nbsp;Book Your Room
-                        </a>
-                        &nbsp;
-                        <p>Q: What is the attire?</p>  
-                        <p>A: Formal. No white dresses.</p>
-                        &nbsp;
-                        <p>Q: Do you have a wedding registry?</p>
-                        <p>A: No, red envelopes only please. For more information on what a red envelope is, visit <a href="https://www.tcml-mandarin.org/feature-story/taiwans-red-envelope-culture-more-than-just-new-year-money" target="_blank" rel="noopener">this article</a>.</p>
-                        &nbsp;
-                        <p>Q: Is everything in the same location?</p>
-                        <p>A: Yes, everything will be at Hotel Vin.</p>
-                        &nbsp;
-                        <p>Q: Is there parking at the venue?</p>
-                        <p>A: There is street parking available. Hotel Vin has a parking garage connected, and also offers valet parking at the main entrance.</p>
-                        &nbsp;
-                        <p>Q: How early can I arrive to the venue?</p>
-                        <p>A: You can arrive as early as you would like! There is a food hall, bars, and other entertainment inside and around Hotel Vin. Check out <a href="https://www.hotelvin.com/" target="_blank" rel="noopener">Hotel Vin's website</a> for more.</p>
-                        &nbsp;
-                        <p>Q: Will there be an open bar?</p>
-                        <p>A: Yes, there will be beer, wine, and our signature cocktails available.</p>
-                        &nbsp;
-                        <p>Q: What is on the menu?</p>
-                        <p>A: We will be serving a  multi-course, family-style, traditional Chinese dinner.</p>
+                        <div class="faq">
+                            <p>Q: When do I need to RSVP by?</p>
+                            <p>A: Please RSVP by February 28, 2027.</p>
+                            <a class="btn btn-accent btn-small" target="_blank" rel="noopener"
+                                href="https://loverly.com/website/v-a-wedding2027">
+                                <i class="fa fa-envelope"></i>&nbsp;&nbsp;RSVP Form
+                            </a>
+                        </div>
+                        <div class="faq">
+                            <p>Q: Where should I stay for the wedding?</p>
+                            <p>A: We have partnered with Hotel Vin to offer a special rate for our guests.</p>
+                            <a class="btn btn-accent btn-small" target="_blank" rel="noopener"
+                                href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1775767375427&amp;key=GRP&amp;app=resvlink">
+                                <i class="fa fa-bed"></i>&nbsp;&nbsp;Book Your Room
+                            </a>
+                        </div>
+                        <div class="faq">
+                            <p>Q: What is the attire?</p>
+                            <p>A: Formal. No white dresses.</p>
+                        </div>
+                        <div class="faq">
+                            <p>Q: Do you have a wedding registry?</p>
+                            <p>A: No, red envelopes only please. For more information on what a red envelope is, visit <a href="https://www.tcml-mandarin.org/feature-story/taiwans-red-envelope-culture-more-than-just-new-year-money" target="_blank" rel="noopener">this article</a>.</p>
+                        </div>
+                        <div class="faq">
+                            <p>Q: Is everything in the same location?</p>
+                            <p>A: Yes, everything will be at Hotel Vin.</p>
+                        </div>
+                        <div class="faq">
+                            <p>Q: Is there parking at the venue?</p>
+                            <p>A: There is street parking available. Hotel Vin has a parking garage connected, and also offers valet parking at the main entrance.</p>
+                        </div>
+                        <div class="faq">
+                            <p>Q: How early can I arrive to the venue?</p>
+                            <p>A: You can arrive as early as you would like! There is a food hall, bars, and other entertainment inside and around Hotel Vin. Check out <a href="https://www.hotelvin.com/" target="_blank" rel="noopener">Hotel Vin's website</a> for more.</p>
+                        </div>
+                        <div class="faq">
+                            <p>Q: Will there be an open bar?</p>
+                            <p>A: Yes, there will be beer, wine, and our signature cocktails available.</p>
+                        </div>
+                        <div class="faq">
+                            <p>Q: What is on the menu?</p>
+                            <p>A: We will be serving a  multi-course, family-style, traditional Chinese dinner.</p>
+                        </div>
                 <br>
                     </div>
             </div>
