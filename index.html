@@ -131,36 +131,6 @@
             margin-right: 10px
         }
 
-        /* RSVP deadline under the nav bar's RSVP Form pill */
-        .nav-rsvp-by {
-            display: block;
-            color: #fff;
-            font-size: 12px;
-            letter-spacing: 1px;
-            margin-top: 8px;
-        }
-
-        /* desktop: hang the note just below the pill without making the nav bar taller
-           (fits in the bar's bottom padding: 50px at the top of the page, 35px once scrolled);
-           right:10px offsets the pill's margin-right so the note centers under the pill */
-        @media screen and (min-width:992px) {
-            header ul.primary-nav li.nav-rsvp {
-                display: inline-block;
-                position: relative;
-            }
-
-            .nav-rsvp-by {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 10px;
-                margin-top: 10px;
-                font-size: 11px;
-                text-align: center;
-                white-space: nowrap;
-            }
-        }
-
         /* engagement pics: grid of evenly-cropped tiles that wraps into rows, like the Hotel Vin photo grid */
         #eng-pics .eng-pics-grid {
             margin-bottom: 15px;
@@ -310,6 +280,7 @@
         /* RSVP deadline note under the hero RSVP button: white with the same shadow as the date */
         .hero .hero-rsvp-by {
             color: #fff;
+            font-weight: 700;
             font-size: 15px;
             letter-spacing: 1px;
             margin: 12px 0 0;
@@ -422,7 +393,7 @@
                                 <li><a href="#eng-pics">Pictures</a></li>
                                 <li><a href="#venue">Venue</a></li>
                                 <li><a href="#info">Information</a></li>
-                                <li class="nav-rsvp"><a href="https://loverly.com/website/v-a-wedding2027" class="btn-white btn-small btn-accent">RSVP Form</a><span class="nav-rsvp-by">RSVP by February 28, 2027</span></li>
+                                <li><a href="https://loverly.com/website/v-a-wedding2027" class="btn-white btn-small btn-accent">RSVP Form</a></li>
                                 <li><a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1775767375427&amp;key=GRP&amp;app=resvlink" target="_blank" rel="noopener" class="btn-white btn-small btn-accent">Discounted Rooms</a></li>
                             </ul>
                         </nav>
