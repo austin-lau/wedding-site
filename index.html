@@ -131,6 +131,59 @@
             margin-right: 10px
         }
 
+        /* RSVP deadline under the nav bar's RSVP Form pill (bold, like the one under the hero button) */
+        .nav-rsvp-by {
+            display: block;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+
+        /* nav bar height: vertical padding lives here rather than in js/scripts.js (which used to set
+           it inline on scroll); 50px at the top of the page, 35px once scrolled — same as before */
+        section.navigation header {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        section.navigation.fixed header {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+
+        /* desktop: slimmer red bar. The deadline note hangs just below the RSVP pill without adding
+           height, so the bottom padding is a bit larger than the top to leave room for it;
+           right:10px offsets the pill's margin-right so the note centers under the pill */
+        @media screen and (min-width:992px) {
+            section.navigation header {
+                padding-top: 20px;
+                padding-bottom: 34px;
+            }
+
+            section.navigation.fixed header {
+                padding-top: 14px;
+                padding-bottom: 30px;
+            }
+
+            header ul.primary-nav li.nav-rsvp {
+                display: inline-block;
+                position: relative;
+            }
+
+            .nav-rsvp-by {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 10px;
+                margin-top: 6px;
+                font-size: 11px;
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+
         /* engagement pics: grid of evenly-cropped tiles that wraps into rows, like the Hotel Vin photo grid */
         #eng-pics .eng-pics-grid {
             margin-bottom: 15px;
@@ -247,9 +300,18 @@
         }
 
         /* hero logo: real text instead of the old "Ram ❤ Antara" script-logo image */
+        @font-face {
+            font-family: 'New Icon Script';
+            src: local('New Icon Script'), local('NewIconScript'),
+                 url('fonts/new-icon-script/NewIconScript.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
         .hero-title {
             color: #fff;
-            font-family: 'Great Vibes', cursive;
+            font-family: 'New Icon Script', 'Great Vibes', cursive;
             font-weight: 400;
             font-size: 96px;
             letter-spacing: 1px;
@@ -393,7 +455,7 @@
                                 <li><a href="#eng-pics">Pictures</a></li>
                                 <li><a href="#venue">Venue</a></li>
                                 <li><a href="#info">Information</a></li>
-                                <li><a href="https://loverly.com/website/v-a-wedding2027" class="btn-white btn-small btn-accent">RSVP Form</a></li>
+                                <li class="nav-rsvp"><a href="https://loverly.com/website/v-a-wedding2027" class="btn-white btn-small btn-accent">RSVP Form</a><span class="nav-rsvp-by">RSVP by February 28, 2027</span></li>
                                 <li><a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1775767375427&amp;key=GRP&amp;app=resvlink" target="_blank" rel="noopener" class="btn-white btn-small btn-accent">Discounted Rooms</a></li>
                             </ul>
                         </nav>
