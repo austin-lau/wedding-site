@@ -291,9 +291,10 @@
             margin-top: 40px;
         }
 
-        /* the last thing in each item (an answer paragraph or a button) adds no space of its own,
-           so the 40px above is the whole gap either way */
-        #info .faq > :last-child {
+        /* an answer paragraph that ends an item adds no space of its own, so the 40px above is the
+           whole gap whether the item ends in text or a button (paragraphs only: zeroing a button's
+           bottom padding pushes its label to the bottom of the pill) */
+        #info .faq > p:last-child {
             margin-bottom: 0;
             padding-bottom: 0;
         }
