@@ -243,6 +243,17 @@
             text-transform: none;
         }
 
+        /* mobile: "Engagement Pictures" wraps to two lines, and the theme's fixed h3 line-height
+           (29px, smaller than the 42px font) made the lines overlap — use a proportional line-height */
+        @media screen and (max-width:767px) {
+            #events h3.header,
+            #eng-pics h3.header,
+            #venue h3.header,
+            #info h3.header {
+                line-height: 1.25;
+            }
+        }
+
         /* Details section: each event (h5 + optional note) is wrapped in .event so one consistent
            gap can be applied between events, regardless of whether a note is present. Bootstrap's
            default h5 margin and the global p{padding-bottom:20px} were producing uneven gaps
